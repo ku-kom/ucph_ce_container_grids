@@ -149,4 +149,7 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
             )
         )->setIcon('EXT:ucph_ce_container_grids/Resources/Public/Icons/ContentElements/container-columns-4.svg')
     );
+
+    // Rename wizard tab
+    $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['itemGroups']['container'] = 'LLL:EXT:ucph_ce_container_grids/Resources/Private/Language/locallang_be.xlf:ucph_ce_container_grids_title';
 }
