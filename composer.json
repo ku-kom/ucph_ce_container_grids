@@ -1,0 +1,25 @@
+{
+    "name": "university-of-copenhagen/ucph-ce-container-grids",
+    "type": "typo3-cms-extension",
+    "description": "UCPH TYPO3 content element \"Grids\"",
+    "authors": [{
+        "name": "Nanna Ellegaard",
+        "role": "Developer"
+    }],
+    "homepage": "https://www.ku.dk/",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+        "b13/container": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "UniversityOfCopenhagen\\UcphCeContainerGrids\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "ucph_ce_container_grids"
+        }
+    }
+}
