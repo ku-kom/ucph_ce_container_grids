@@ -15,4 +15,4 @@ if ($versionInformation->getMajorVersion() < 12) {
 }
 
 // ucph_ce_container_grids Viewhelper namespace
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['ucph-grids'] = ['UniversityOfCopenhagen\UcphCeContainerGrids\ViewHelpers'];
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['ucphgrids'] = ['UniversityOfCopenhagen\UcphCeContainerGrids\ViewHelpers'];
