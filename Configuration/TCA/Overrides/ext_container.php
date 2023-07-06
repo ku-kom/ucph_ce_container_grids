@@ -11,6 +11,8 @@ defined('TYPO3') or die('Access denied.');
 call_user_func(function ($extKey ='ucph_ce_container_grids') {
     // Activate extension container if extension is activated
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
+        // Allowed CTypes inside accordions
+        $disallowedCTypes = 'ucph_ce_container_grids';
         // \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
     //     (
     //         new \B13\Container\Tca\ContainerConfiguration(
@@ -38,11 +40,11 @@ call_user_func(function ($extKey ='ucph_ce_container_grids') {
                         [
                             [
                                 'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.left',
-                                'colPos' => 201
+                                'colPos' => 201, 'disallowed' => ['CType' => $disallowedCTypes]
                             ],
                             [
                                 'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.right',
-                                'colPos' => 202
+                                'colPos' => 202, 'disallowed' => ['CType' => $disallowedCTypes]
                             ]
                         ]
                     ]
@@ -62,12 +64,12 @@ call_user_func(function ($extKey ='ucph_ce_container_grids') {
                             [
                                 'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.left',
                                 'colspan' => 1,
-                                'colPos' => 201
+                                'colPos' => 201, 'disallowed' => ['CType' => $disallowedCTypes]
                             ],
                             [
                                 'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.right',
                                 'colspan' => 3,
-                                'colPos' => 202
+                                'colPos' => 202, 'disallowed' => ['CType' => $disallowedCTypes]
                             ]
                         ]
                     ]
@@ -85,12 +87,12 @@ call_user_func(function ($extKey ='ucph_ce_container_grids') {
                             [
                                 'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.left',
                                 'colspan' => 3,
-                                'colPos' => 201
+                                'colPos' => 201, 'disallowed' => ['CType' => $disallowedCTypes]
                             ],
                             [
                                 'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.right',
                                 'colspan' => 2,
-                                'colPos' => 202
+                                'colPos' => 202, 'disallowed' => ['CType' => $disallowedCTypes]
                             ]
                         ]
                     ]
@@ -107,15 +109,15 @@ call_user_func(function ($extKey ='ucph_ce_container_grids') {
                         [
                             [
                                 'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.left',
-                                'colPos' => 201
+                                'colPos' => 201, 'disallowed' => ['CType' => $disallowedCTypes]
                             ],
                             [
                                 'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.middle',
-                                'colPos' => 203
+                                'colPos' => 203, 'disallowed' => ['CType' => $disallowedCTypes]
                             ],
                             [
                                 'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.right',
-                                'colPos' => 202
+                                'colPos' => 202, 'disallowed' => ['CType' => $disallowedCTypes]
                             ]
                         ]
                     ]
@@ -132,19 +134,19 @@ call_user_func(function ($extKey ='ucph_ce_container_grids') {
                         [
                             [
                                 'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.left',
-                                'colPos' => 201
+                                'colPos' => 201, 'disallowed' => ['CType' => $disallowedCTypes]
                             ],
                             [
                                 'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.middle_left',
-                                'colPos' => 203
+                                'colPos' => 203, 'disallowed' => ['CType' => $disallowedCTypes]
                             ],
                             [
                                 'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.middle_right',
-                                'colPos' => 204
+                                'colPos' => 204, 'disallowed' => ['CType' => $disallowedCTypes]
                             ],
                             [
                                 'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.right',
-                                'colPos' => 202
+                                'colPos' => 202, 'disallowed' => ['CType' => $disallowedCTypes]
                             ]
                         ]
                     ]
