@@ -17,6 +17,7 @@ lib.contentContainer {
     }
 }
 # tt_content.container_1_columns < lib.contentContainer // Currently not needing one column
+tt_content.container_1_columns < lib.contentContainer
 tt_content.container_2_columns < lib.contentContainer
 tt_content.container_2_columns_right < lib.contentContainer
 tt_content.container_2_columns_left < lib.contentContainer

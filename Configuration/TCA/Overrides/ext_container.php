@@ -14,23 +14,23 @@ call_user_func(function ($extKey ='ucph_ce_container_grids') {
         // Allowed CTypes inside accordions
         $disallowedCTypes = 'ucph_ce_container_grids,container_2_columns,container_2_columns_right,container_2_columns_left,container_3_columns,container_4_columns';
 
-        // \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
-    //     (
-    //         new \B13\Container\Tca\ContainerConfiguration(
-    //             'container_1_columns',
-    //             'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.container_1_columns.name',
-    //             '',
-    //             [
-    //                 [
-    //                     [
-    //                         'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.middle',
-    //                         'colPos' => 201, 'disallowed' => ['CType' => $disallowedCTypes]
-    //                     ]
-    //                 ]
-    //             ]
-    //         )
-    //     )->setIcon('EXT:' . $extKey . '/Resources/Public/Icons/ContentElements/container-columns-1.svg')
-        // );
+        \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+            new \B13\Container\Tca\ContainerConfiguration(
+                'container_1_columns',
+                'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.container_1_columns.name',
+                '',
+                [
+                    [
+                        [
+                            'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.middle',
+                            'colPos' => 201, 'disallowed' => ['CType' => $disallowedCTypes]
+                        ]
+                    ]
+                ]
+            )
+        )->setIcon('EXT:' . $extKey . '/Resources/Public/Icons/ContentElements/container-columns-1.svg')
+        );
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
             (
                 new \B13\Container\Tca\ContainerConfiguration(
