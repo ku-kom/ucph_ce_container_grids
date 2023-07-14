@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * This file is part of the package ucph_ce_container_grids.
@@ -6,7 +6,6 @@
  * LICENSE file that was distributed with this source code.
  * University of Copenhagen.
  */
-declare(strict_types=1);
 
 defined('TYPO3') or die();
 
