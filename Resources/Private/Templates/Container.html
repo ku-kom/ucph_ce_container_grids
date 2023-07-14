@@ -2,9 +2,9 @@
 <f:variable name="spaceBefore">{f:if(condition: '{data.space_before_class}', then: '{data.space_before_class}', else: 'none')}</f:variable>
 <f:variable name="spaceAfter">{f:if(condition: '{data.space_after_class}', then: '{data.space_after_class}', else: 'none')}</f:variable>
 <f:variable name="crowIndent">{data.frame_class}</f:variable>
-<f:variable name="crowBg">{f:if(condition: '{data.tx_ucph_ce_background_color}', then: '{data.tx_ucph_ce_background_color}', else: 'crow-bg-none')}</f:variable>
-<section>
-    <div class="row {crowBg}" data-container-identifier="{data.CType}">
+
+<section class=" grid-row {data.tx_ucph_ce_background_color}">
+    <div class="row" data-container-identifier="{data.CType}">
         <f:render partial="Container/Rendering/{data.CType -> ucphgrids:format.upperCamelCase()}" arguments="{_all}" />
     </div>
 </section>

@@ -5,7 +5,7 @@ lib.contentElement {
     }
 }
 
-# CONTAINER CONFIG
+# Container config
 lib.contentContainer < lib.contentElement
 lib.contentContainer {
     templateRootPaths.100 = EXT:ucph_ce_container_grids/Resources/Private/Templates/
@@ -16,7 +16,8 @@ lib.contentContainer {
         1628519620 = B13\Container\DataProcessing\ContainerProcessor
     }
 }
-# tt_content.container_1_columns < lib.contentContainer // Currently not needing one column
+
+# Container cTypes
 tt_content.container_1_columns < lib.contentContainer
 tt_content.container_2_columns < lib.contentContainer
 tt_content.container_2_columns_right < lib.contentContainer
