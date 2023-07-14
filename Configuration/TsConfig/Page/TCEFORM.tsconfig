@@ -1,0 +1,47 @@
+TCEFORM {
+    tt_content {
+        # cType container grid columns:
+        frame_class {
+            types {
+                container_1_columns {
+                    disabled = 1
+                }
+            }
+        }
+        frame_class {
+            types {
+                container_2_columns {
+                    disabled = 1
+                }
+            }
+        }
+        frame_class {
+            types {
+                container_2_columns_right {
+                    disabled = 1
+                }
+            }
+        }
+        frame_class {
+            types {
+                container_2_columns_left {
+                    disabled = 1
+                }
+            }
+        }
+        frame_class {
+            types {
+                container_3_columns {
+                    disabled = 1
+                }
+            }
+        }
+        frame_class {
+            types {
+                container_4_columns {
+                    disabled = 1
+                }
+            }
+        }
+    }
+}
