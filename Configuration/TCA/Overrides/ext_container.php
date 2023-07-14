@@ -11,6 +11,7 @@ defined('TYPO3') or die('Access denied.');
 call_user_func(function ($extKey ='ucph_ce_container_grids') {
     // Activate extension container if extension is activated
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
+        
         // Allowed CTypes inside accordions
         $disallowedCTypes = 'ucph_ce_container_grids,container_1_columns,container_2_columns,container_2_columns_right,container_2_columns_left,container_3_columns,container_4_columns';
 
