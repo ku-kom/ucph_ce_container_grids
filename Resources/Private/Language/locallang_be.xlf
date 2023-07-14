@@ -48,7 +48,7 @@
             <trans-unit id="ucph_page_color_select">
             <source>Background color</source>
             </trans-unit>
-            <trans-unit id="color_unset">
+            <trans-unit id="color-unset">
                 <source>None</source>
             </trans-unit>
             <trans-unit id="color-1">
