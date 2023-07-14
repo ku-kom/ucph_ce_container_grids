@@ -46,7 +46,7 @@
                 <source>Middle Right</source>
             </trans-unit>
             <trans-unit id="ucph_page_color_select">
-            <source>Background color</source>
+                <source>Row background color</source>
             </trans-unit>
             <trans-unit id="color-unset">
                 <source>None</source>
