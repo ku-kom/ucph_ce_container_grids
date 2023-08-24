@@ -1,5 +1,5 @@
 {
-    "name": "university-of-copenhagen/ucph-ce-container-grids",
+    "name": "university-of-copenhagen/ucph-content-container-grids",
     "type": "typo3-cms-extension",
     "description": "UCPH TYPO3 content element \"Grids\"",
     "authors": [{
@@ -15,12 +15,12 @@
     },
     "autoload": {
         "psr-4": {
-            "UniversityOfCopenhagen\\UcphCeContainerGrids\\": "Classes/"
+            "UniversityOfCopenhagen\\UcphContentContainerGrids\\": "Classes/"
         }
     },
     "extra": {
         "typo3/cms": {
-            "extension-key": "ucph_ce_container_grids"
+            "extension-key": "ucph_content_container_grids"
         }
     }
 }

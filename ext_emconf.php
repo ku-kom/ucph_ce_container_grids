@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Extension Manager/Repository config file for ext "ucph_ce_container_grids".
+ * Extension Manager/Repository config file for ext "ucph_content_container_grids".
  */
 $EM_CONF[$_EXTKEY] = [
     'title' => 'UCPH TYPO3 content element "Grids"',
@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = [
     ],
     'autoload' => [
         'psr-4' => [
-            'UniversityOfCopenhagen\\UcphCeContainerGrids\\' => 'Classes',
+            'UniversityOfCopenhagen\\UcphContentContainerGrids\\' => 'Classes',
         ],
     ],
     'state' => 'stable',

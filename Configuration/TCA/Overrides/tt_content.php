@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 /*
- * This file is part of the package ucph_ce_container_grids.
+ * This file is part of the package ucph_content_container_grids.
  * For the full copyright and license information, please read the
  * LICENSE file that was distributed with this source code.
  * University of Copenhagen.
@@ -9,17 +9,17 @@
 
 defined('TYPO3') or die();
 
-call_user_func(function ($extKey ='ucph_ce_container_grids') {
+call_user_func(function ($extKey ='ucph_content_container_grids') {
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
         'tt_content',
         [
-            'tx_ucph_ce_background_color' => [
+            'tx_ucph_content_bg_color' => [
                 'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:ucph_page_color_select',
                 'displayCond' => [
                     'OR' => [
                         // Only add background color select box in these grid CTypes
-                        'FIELD:CType:=:ucph_ce_container_grids',
+                        'FIELD:CType:=:ucph_content_container_grids',
                         'FIELD:CType:=:container_1_columns',
                         'FIELD:CType:=:container_2_columns',
                         'FIELD:CType:=:container_2_columns_right',
@@ -71,7 +71,7 @@ call_user_func(function ($extKey ='ucph_ce_container_grids') {
     // Add in tab "Appearence"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
-        'tx_ucph_ce_background_color',
+        'tx_ucph_content_bg_color',
         '',
         'after:space_after_class'
     );

@@ -1,19 +1,19 @@
 <?php declare(strict_types=1);
 
 /*
- * This file is part of the package ucph_ce_container_grids.
+ * This file is part of the package ucph_content_container_grids.
  * For the full copyright and license information, please read the
  * LICENSE file that was distributed with this source code.
  */
 
 defined('TYPO3') or die('Access denied.');
 
-call_user_func(function ($extKey ='ucph_ce_container_grids') {
+call_user_func(function ($extKey ='ucph_content_container_grids') {
     // Activate extension container if extension is activated
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
         
         // Allowed CTypes inside accordions
-        $disallowedCTypes = 'ucph_ce_container_grids,container_1_columns,container_2_columns,container_2_columns_right,container_2_columns_left,container_3_columns,container_4_columns';
+        $disallowedCTypes = 'ucph_content_container_grids,container_1_columns,container_2_columns,container_2_columns_right,container_2_columns_left,container_3_columns,container_4_columns';
 
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
         (
@@ -155,6 +155,6 @@ call_user_func(function ($extKey ='ucph_ce_container_grids') {
         );
 
         // Rename wizard tab
-        $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['itemGroups']['container'] = 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:ucph_ce_container_grids_title';
+        $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['itemGroups']['container'] = 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:ucph_content_container_grids_title';
     }
 });

@@ -1,16 +1,16 @@
 lib.contentElement {
     dataProcessing {
         # RESPONSIVE IMAGE CONFIG
-        1628591788 = UniversityOfCopenhagen\UcphCeContainerGrids\DataProcessing\ContainerContextProcessor
+        1628591788 = UniversityOfCopenhagen\UcphContentContainerGrids\DataProcessing\ContainerContextProcessor
     }
 }
 
 # Container config
 lib.contentContainer < lib.contentElement
 lib.contentContainer {
-    templateRootPaths.100 = EXT:ucph_ce_container_grids/Resources/Private/Templates/
-    partialRootPaths.100 = EXT:ucph_ce_container_grids/Resources/Private/Partials/
-    layoutRootPaths.100 = EXT:ucph_ce_container_grids/Resources/Private//Layouts/
+    templateRootPaths.100 = EXT:ucph_content_container_grids/Resources/Private/Templates/
+    partialRootPaths.100 = EXT:ucph_content_container_grids/Resources/Private/Partials/
+    layoutRootPaths.100 = EXT:ucph_content_container_grids/Resources/Private//Layouts/
     templateName = Container
     dataProcessing {
         1628519620 = B13\Container\DataProcessing\ContainerProcessor

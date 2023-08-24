@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace UniversityOfCopenhagen\UcphCeContainerGrids\DataProcessing;
+namespace UniversityOfCopenhagen\UcphContentContainerGrids\DataProcessing;
 
 use TYPO3\CMS\Core\Cache\CacheManager;
 use TYPO3\CMS\Core\Utility\GeneralUtility;

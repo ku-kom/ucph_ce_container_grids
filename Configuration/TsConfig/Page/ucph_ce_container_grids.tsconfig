@@ -3,9 +3,9 @@
 //   common {
 //     elements {
 //       container_2_columns {
-//         iconIdentifier = ucph_ce_container_grids_icon
-//         title = LLL:EXT:ucph_ce_container_grids/Resources/Private/Language/locallang_be.xlf:ucph_ce_container_grids_title
-//         description = LLL:EXT:ucph_ce_container_grids/Resources/Private/Language/locallang_be.xlf:container.container_2_columns.name
+//         iconIdentifier = ucph_content_container_grids_icon
+//         title = LLL:EXT:ucph_content_container_grids/Resources/Private/Language/locallang_be.xlf:ucph_content_container_grids_title
+//         description = LLL:EXT:ucph_content_container_grids/Resources/Private/Language/locallang_be.xlf:container.container_2_columns.name
 //         tt_content_defValues {
 //           CType = container_2_columns
 //         }

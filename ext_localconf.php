@@ -10,9 +10,9 @@ $versionInformation = GeneralUtility::makeInstance(Typo3Version::class);
 // Only include page.tsconfig if TYPO3 version is below 12 so that it is not imported twice.
 if ($versionInformation->getMajorVersion() < 12) {
     ExtensionManagementUtility::addPageTSConfig('
-      @import "EXT:ucph_ce_container_grids/Configuration/page.tsconfig"
+      @import "EXT:ucph_content_container_grids/Configuration/page.tsconfig"
    ');
 }
 
-// ucph_ce_container_grids Viewhelper namespace
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['ucphgrids'] = ['UniversityOfCopenhagen\UcphCeContainerGrids\ViewHelpers'];
+// ucph_content_container_grids Viewhelper namespace
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['ucphgrids'] = ['UniversityOfCopenhagen\UcphContentContainerGrids\ViewHelpers'];
