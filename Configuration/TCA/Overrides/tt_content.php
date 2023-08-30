@@ -4,75 +4,157 @@
  * This file is part of the package ucph_content_container_grids.
  * For the full copyright and license information, please read the
  * LICENSE file that was distributed with this source code.
- * University of Copenhagen.
  */
 
-defined('TYPO3') or die();
+defined('TYPO3') or die('Access denied.');
 
 call_user_func(function ($extKey ='ucph_content_container_grids') {
+    // Activate extension container if extension is activated
+    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
+        
+        // Allowed CTypes inside accordions
+        $disallowedCTypes = 'ucph_content_container_grids,container_1_columns,container_2_columns,container_2_columns_right,container_2_columns_left,container_3_columns,container_4_columns';
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
-        'tt_content',
-        [
-            'tx_ucph_content_bg_color' => [
-                'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:ucph_page_color_select',
-                'displayCond' => [
-                    'OR' => [
-                        // Only add background color select box in these grid CTypes
-                        'FIELD:CType:=:ucph_content_container_grids',
-                        'FIELD:CType:=:container_1_columns',
-                        'FIELD:CType:=:container_2_columns',
-                        'FIELD:CType:=:container_2_columns_right',
-                        'FIELD:CType:=:container_2_columns_left',
-                        'FIELD:CType:=:container_3_columns',
-                        'FIELD:CType:=:container_4_columns',
+        \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+            new \B13\Container\Tca\ContainerConfiguration(
+                'container_1_columns',
+                'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.container_1_columns.name',
+                '',
+                [
+                    [
+                        [
+                            'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.middle',
+                            'colPos' => 201, 'disallowed' => ['CType' => $disallowedCTypes]
+                        ]
                     ]
-                 ],
-                'exclude' => true,
-                'config' => [
-                    'type' => 'select',
-                    'renderType' => 'selectSingle',
-                    'items' => [
+                ]
+            )
+        )->setIcon('EXT:' . $extKey . '/Resources/Public/Icons/ContentElements/container-columns-1.svg')
+        );
+        \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+            (
+                new \B13\Container\Tca\ContainerConfiguration(
+                    'container_2_columns',
+                    'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.container_2_columns.name',
+                    '',
+                    [
                         [
-                            'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:color-unset',
-                            '',
-                        ],
+                            [
+                                'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.left',
+                                'colPos' => 201, 'disallowed' => ['CType' => $disallowedCTypes]
+                            ],
+                            [
+                                'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.right',
+                                'colPos' => 202, 'disallowed' => ['CType' => $disallowedCTypes]
+                            ]
+                        ]
+                    ]
+                )
+            )->setIcon('EXT:' . $extKey . '/Resources/Public/Icons/ContentElements/container-columns-2.svg')
+        );
+        \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+            (
+                new \B13\Container\Tca\ContainerConfiguration(
+                    'container_2_columns_right',
+                    'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.container_2_columns_right.name',
+                    '',
+                    [
                         [
-                            'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:color-1',
-                            'subset-color-1',
-                        ],
+                            [
+                                'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.left',
+                                'colspan' => 1,
+                                'colPos' => 201, 'disallowed' => ['CType' => $disallowedCTypes]
+                            ],
+                            [
+                                'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.right',
+                                'colspan' => 3,
+                                'colPos' => 202, 'disallowed' => ['CType' => $disallowedCTypes]
+                            ]
+                        ]
+                    ]
+                )
+            )->setIcon('EXT:' . $extKey . '/Resources/Public/Icons/ContentElements/container-columns-2-right.svg')
+        );
+        \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+            (
+                new \B13\Container\Tca\ContainerConfiguration(
+                    'container_2_columns_left',
+                    'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.container_2_columns_left.name',
+                    '',
+                    [
                         [
-                            'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:color-2',
-                            'subset-color-2',
-                        ],
+                            [
+                                'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.left',
+                                'colspan' => 3,
+                                'colPos' => 201, 'disallowed' => ['CType' => $disallowedCTypes]
+                            ],
+                            [
+                                'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.right',
+                                'colspan' => 2,
+                                'colPos' => 202, 'disallowed' => ['CType' => $disallowedCTypes]
+                            ]
+                        ]
+                    ]
+                )
+            )->setIcon('EXT:' . $extKey . '/Resources/Public/Icons/ContentElements/container-columns-2-left.svg')
+        );
+        \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+            (
+                new \B13\Container\Tca\ContainerConfiguration(
+                    'container_3_columns',
+                    'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.container_3_columns.name',
+                    '',
+                    [
                         [
-                            'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:color-3',
-                            'subset-color-3',
-                        ],
+                            [
+                                'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.left',
+                                'colPos' => 201, 'disallowed' => ['CType' => $disallowedCTypes]
+                            ],
+                            [
+                                'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.middle',
+                                'colPos' => 203, 'disallowed' => ['CType' => $disallowedCTypes]
+                            ],
+                            [
+                                'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.right',
+                                'colPos' => 202, 'disallowed' => ['CType' => $disallowedCTypes]
+                            ]
+                        ]
+                    ]
+                )
+            )->setIcon('EXT:' . $extKey . '/Resources/Public/Icons/ContentElements/container-columns-3.svg')
+        );
+        \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+            (
+                new \B13\Container\Tca\ContainerConfiguration(
+                    'container_4_columns',
+                    'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.container_4_columns.name',
+                    '',
+                    [
                         [
-                            'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:color-4',
-                            'subset-color-4',
-                        ],
-                        [
-                            'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:color-5',
-                            'subset-color-5',
-                        ],
-                        [
-                            'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:color-6',
-                            'subset-color-6',
-                        ],
-                    ],
-                ],
-                'default' => '',
-            ],
-         ]
-    );
+                            [
+                                'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.left',
+                                'colPos' => 201, 'disallowed' => ['CType' => $disallowedCTypes]
+                            ],
+                            [
+                                'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.middle_left',
+                                'colPos' => 203, 'disallowed' => ['CType' => $disallowedCTypes]
+                            ],
+                            [
+                                'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.middle_right',
+                                'colPos' => 204, 'disallowed' => ['CType' => $disallowedCTypes]
+                            ],
+                            [
+                                'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.right',
+                                'colPos' => 202, 'disallowed' => ['CType' => $disallowedCTypes]
+                            ]
+                        ]
+                    ]
+                )
+            )->setIcon('EXT:' . $extKey . '/Resources/Public/Icons/ContentElements/container-columns-4.svg')
+        );
 
-    // Add in tab "Appearence"
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
-        'tt_content',
-        'tx_ucph_content_bg_color',
-        '',
-        'after:space_after_class'
-    );
+        // Rename wizard tab
+        $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['itemGroups']['container'] = 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:ucph_content_container_grids_title';
+    }
 });

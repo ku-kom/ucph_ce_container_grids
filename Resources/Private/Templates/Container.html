@@ -1,8 +1,9 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:variable name="spaceBefore">{f:if(condition: '{data.space_before_class}', then: '{data.space_before_class}', else: 'none')}</f:variable>
 <f:variable name="spaceAfter">{f:if(condition: '{data.space_after_class}', then: '{data.space_after_class}', else: 'none')}</f:variable>
+
 <f:variable name="crowIndent">{data.frame_class}</f:variable>
-<section class=" grid-row {data.tx_ucph_content_bg_color}">
+<section class=" grid-row {colorName}">
     <div class="container">
         <div class="row" data-container-identifier="{data.CType}">
             <f:render partial="Container/Rendering/{data.CType -> ucphgrids:format.upperCamelCase()}" arguments="{_all}" />
