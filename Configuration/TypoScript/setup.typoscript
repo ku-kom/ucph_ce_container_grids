@@ -1,6 +1,14 @@
 lib.contentElement {
     dataProcessing {
-        # RESPONSIVE IMAGE CONFIG
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = image
+            folders.field = file_folder
+            sorting.field = filelink_sorting
+            as = bgImages
+        }
+    
+        # Container config
         1628591788 = UniversityOfCopenhagen\UcphContentContainerGrids\DataProcessing\ContainerContextProcessor
     }
 }
@@ -9,7 +17,10 @@ lib.contentElement {
 lib.contentContainer < lib.contentElement
 lib.contentContainer {
     templateRootPaths.100 = EXT:ucph_content_container_grids/Resources/Private/Templates/
-    partialRootPaths.100 = EXT:ucph_content_container_grids/Resources/Private/Partials/
+    partialRootPaths {
+        100 = EXT:ucph_content_container_grids/Resources/Private/Partials/
+        110 = EXT:ucph_content_background/Resources/Private/Partials/
+    }
     layoutRootPaths.100 = EXT:ucph_content_container_grids/Resources/Private//Layouts/
     templateName = Container
     dataProcessing {
