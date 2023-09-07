@@ -5,7 +5,7 @@ lib.contentElement {
             references.fieldName = image
             folders.field = file_folder
             sorting.field = filelink_sorting
-            as = bgImages
+            as = backgroundimage
         }
     
         # Container config
