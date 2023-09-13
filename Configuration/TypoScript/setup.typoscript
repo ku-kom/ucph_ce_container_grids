@@ -35,3 +35,4 @@ tt_content.container_2_columns_right < lib.contentContainer
 tt_content.container_2_columns_left < lib.contentContainer
 tt_content.container_3_columns < lib.contentContainer
 tt_content.container_4_columns < lib.contentContainer
+tt_content.container_indent_columns < lib.contentContainer

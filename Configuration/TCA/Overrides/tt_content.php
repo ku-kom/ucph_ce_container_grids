@@ -12,8 +12,8 @@ call_user_func(function ($extKey ='ucph_content_container_grids') {
     // Activate extension container if extension is activated
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
         
-        // Allowed CTypes inside accordions
-        $disallowedCTypes = 'ucph_content_container_grids,container_1_columns,container_2_columns,container_2_columns_right,container_2_columns_left,container_3_columns,container_4_columns';
+        // Disallowed
+        $disallowedCTypes = 'ucph_content_container_grids,container_1_columns,container_2_columns,container_2_columns_right,container_2_columns_left,container_3_columns,container_4_columns,container_indent_columns';
 
         \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
         (
@@ -152,6 +152,23 @@ call_user_func(function ($extKey ='ucph_content_container_grids') {
                     ]
                 )
             )->setIcon('EXT:' . $extKey . '/Resources/Public/Icons/ContentElements/container-columns-4.svg')
+        );
+        \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+            (
+                new \B13\Container\Tca\ContainerConfiguration(
+                    'container_indent_columns',
+                    'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.container_indent_column.name',
+                    '',
+                    [
+                        [
+                            [
+                                'name' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:container.column.middle',
+                                'colPos' => 201, 'disallowed' => ['CType' => $disallowedCTypes]
+                            ]
+                        ]
+                    ]
+                )
+            )->setIcon('EXT:' . $extKey . '/Resources/Public/Icons/Extension.svg')
         );
 
         // Rename wizard tab

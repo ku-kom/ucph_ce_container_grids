@@ -30,6 +30,9 @@
             <trans-unit id="container.container_4_columns.name">
                 <source>4 Columns</source>
             </trans-unit>
+            <trans-unit id="container.container_indent_column.name">
+                <source>Indent content</source>
+            </trans-unit>
             <trans-unit id="container.column.middle">
                 <source>Middle</source>
             </trans-unit>
