@@ -13,7 +13,7 @@
                 <source>Select various grids.</source>
             </trans-unit>
             <trans-unit id="container.container_1_columns.name">
-            <source>1 Column</source>
+                <source>1 Column</source>
             </trans-unit>
             <trans-unit id="container.container_2_columns.name">
                 <source>2 Columns 50%/50%</source>
@@ -31,7 +31,7 @@
                 <source>4 Columns</source>
             </trans-unit>
             <trans-unit id="container.container_indent_column.name">
-                <source>Indent content</source>
+                <source>1 column indented</source>
             </trans-unit>
             <trans-unit id="container.column.middle">
                 <source>Middle</source>
