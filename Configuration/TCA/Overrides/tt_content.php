@@ -168,7 +168,7 @@ call_user_func(function ($extKey ='ucph_content_container_grids') {
                         ]
                     ]
                 )
-            )->setIcon('EXT:' . $extKey . '/Resources/Public/Icons/Extension.svg')
+            )->setIcon('EXT:' . $extKey . '/Resources/Public/Icons/ContentElements/container-columns-1-indent.svg')
         );
 
         // Rename wizard tab
